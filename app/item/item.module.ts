@@ -10,13 +10,10 @@ export const itemRoutes: Routes = [
   { path: "items", component: ItemsComponent },
   { path: "item/:id", component: ItemDetailComponent },
 ];
-
-  
 const comp = [
   ItemsComponent,
   ItemDetailComponent
 ];
-
 const providers = [
   ItemService
 ];
