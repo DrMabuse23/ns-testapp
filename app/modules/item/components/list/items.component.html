@@ -1,0 +1,14 @@
+<ActionBar title="My App" class="action-bar">
+    <ActionItem ios.position="right" android.position="right">
+        
+    </ActionItem>
+</ActionBar>
+<StackLayout class="page">
+    <Button class="btn btn-primary btn-active" text="Tap me!" (tap)="testDebugBr()"></Button>
+    <ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['/item'+item.id]" [text]="item.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</StackLayout>
