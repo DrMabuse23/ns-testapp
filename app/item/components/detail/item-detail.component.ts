@@ -1,3 +1,4 @@
+import { RouterExtensions } from "nativescript-angular/router";
 import { ItemService } from "../../providers/item.service";
 import { Item } from "../../models/item";
 import { Component, OnInit } from "@angular/core";
@@ -13,11 +14,17 @@ export class ItemDetailComponent implements OnInit {
 
   constructor(
     private itemService: ItemService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private routerExtensions: RouterExtensions
   ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params["id"];
     this.item = this.itemService.getItem(id);
+    console.log('id was coming');
+  }
+  
+  public goBack() {
+    this.routerExtensions.back();
   }
 }

@@ -1,4 +1,6 @@
-<ActionBar title="Details" class="action-bar"></ActionBar>
+<ActionBar title="Details" class="action-bar">
+    <NavigationButton text="< Back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
 <FlexboxLayout flexDirection="column" class="page">
     <FlexboxLayout class="m-15">
         <Label class="h2" [text]="item.id + '. '"></Label>
